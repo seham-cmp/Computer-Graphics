@@ -47,6 +47,7 @@ void createMenu() {
 	glutAddMenuEntry("Green", 2);
 	glutAddMenuEntry("Blue", 3);
 	glutAddMenuEntry("Orange", 4);
+	glutAddMenuEntry("Yellow", 5);
 	glutAttachMenu(GLUT_RIGHT_BUTTON);
 }
 
@@ -67,7 +68,8 @@ void display() {
 	if (menu_value == 1) drawColorBoxes(1, 0, 0);
 	if (menu_value == 2) drawColorBoxes(0, 1, 0);
 	if (menu_value == 3) drawColorBoxes(0, 0, 1);
-	if (menu_value == 4) drawColorBoxes(1, .58, .39);
+	if (menu_value == 4) drawColorBoxes(1, .64, 0);
+	if (menu_value == 5) drawColorBoxes(1, 1, 0);
 	drawBoard();
 
 	glFlush();
