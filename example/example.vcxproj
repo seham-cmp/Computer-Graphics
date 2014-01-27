@@ -12,9 +12,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="goblet_poly.cpp" />
-    <ClCompile Include="mahal_poly.cpp" />
-    <ClCompile Include="poly_line.cpp" />
-    <ClCompile Include="poly_line_flip.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{804CCFB8-3B82-4310-BD0A-BF396A12F936}</ProjectGuid>

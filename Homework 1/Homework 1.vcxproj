@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{274B3065-9209-4C2E-8A59-86C6A7C43177}</ProjectGuid>
     <RootNamespace>Homework1</RootNamespace>
+    <ProjectName>Big Dipper</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

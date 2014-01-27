@@ -18,14 +18,5 @@
     <ClCompile Include="goblet_poly.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="mahal_poly.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="poly_line.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="poly_line_flip.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>
