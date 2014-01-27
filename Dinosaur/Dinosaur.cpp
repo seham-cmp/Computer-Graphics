@@ -13,11 +13,11 @@ void drawPolyLineFile(const char * fileName) {
 	std::ifstream inStream;
 	inStream.open(fileName);	// open the file
 
-	if (inStream.fail()) return;
+	if(inStream.fail()) return;
 	glClear(GL_COLOR_BUFFER_BIT);      // clear the screen 
 
 	GLint numpolys, numLines;
-	GLint x, y;
+	GLfloat x ,y;
 	inStream >> numpolys;		           // read the number of polylines
 
 	for (int iPoly = 0; iPoly < numpolys; iPoly++) { // read each polyline
@@ -25,7 +25,7 @@ void drawPolyLineFile(const char * fileName) {
 		glBegin(GL_LINE_STRIP);	     // draw the next polyline
 		for (int i = 0; i < numLines; i++) {
 			inStream >> x >> y;        // read the next x, y pair
-			glVertex2i(x, 480-y);
+			glVertex2f(x, y);
 		}
 		glFlush();
 		glEnd();
@@ -40,7 +40,7 @@ int main(int argc, char** argv) {
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
 	glutInitWindowSize(640, 480);
 	glutInitWindowPosition(0, 0);
-	glutCreateWindow("House");
+	glutCreateWindow("Dinosaur");
 
 	glutDisplayFunc(display);
 	glutMainLoop();
@@ -60,7 +60,7 @@ void display() {
 	glClear(GL_COLOR_BUFFER_BIT);
 
 	setWindow(0, 1024.0, 0, 768.0);
-	drawPolyLineFile("house.dat");
+	drawPolyLineFile("dino.dat");
 
 	glFlush();
 
