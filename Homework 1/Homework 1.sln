@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Big Dipper", "Homework 1\Homework 1.vcxproj", "{274B3065-9209-4C2E-8A59-86C6A7C43177}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dinosaur", "Dinosaur\Dinosaur.vcxproj", "{D6B1D85D-14A8-4C24-B21D-F4E8BEE0CA13}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "House", "House\House.vcxproj", "{95415F85-58FD-4A4D-BCAF-F1779C510AE9}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Checkerboard", "Checkerboard\Checkerboard.vcxproj", "{C3ACE459-2017-47EE-8D9B-9C18183E18E3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Big Dipper", "Big Dipper\Big Dipper.vcxproj", "{10EA7092-1BEB-4ED8-AB36-BBB9836F494C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{274B3065-9209-4C2E-8A59-86C6A7C43177}.Debug|Win32.ActiveCfg = Debug|Win32
-		{274B3065-9209-4C2E-8A59-86C6A7C43177}.Debug|Win32.Build.0 = Debug|Win32
-		{274B3065-9209-4C2E-8A59-86C6A7C43177}.Release|Win32.ActiveCfg = Release|Win32
-		{274B3065-9209-4C2E-8A59-86C6A7C43177}.Release|Win32.Build.0 = Release|Win32
 		{D6B1D85D-14A8-4C24-B21D-F4E8BEE0CA13}.Debug|Win32.ActiveCfg = Debug|Win32
 		{D6B1D85D-14A8-4C24-B21D-F4E8BEE0CA13}.Debug|Win32.Build.0 = Debug|Win32
 		{D6B1D85D-14A8-4C24-B21D-F4E8BEE0CA13}.Release|Win32.ActiveCfg = Release|Win32
@@ -33,6 +29,10 @@ Global
 		{C3ACE459-2017-47EE-8D9B-9C18183E18E3}.Debug|Win32.Build.0 = Debug|Win32
 		{C3ACE459-2017-47EE-8D9B-9C18183E18E3}.Release|Win32.ActiveCfg = Release|Win32
 		{C3ACE459-2017-47EE-8D9B-9C18183E18E3}.Release|Win32.Build.0 = Release|Win32
+		{10EA7092-1BEB-4ED8-AB36-BBB9836F494C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{10EA7092-1BEB-4ED8-AB36-BBB9836F494C}.Debug|Win32.Build.0 = Debug|Win32
+		{10EA7092-1BEB-4ED8-AB36-BBB9836F494C}.Release|Win32.ActiveCfg = Release|Win32
+		{10EA7092-1BEB-4ED8-AB36-BBB9836F494C}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

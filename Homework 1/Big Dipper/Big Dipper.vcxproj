@@ -10,8 +10,11 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BigDipper.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{274B3065-9209-4C2E-8A59-86C6A7C43177}</ProjectGuid>
+    <ProjectGuid>{10EA7092-1BEB-4ED8-AB36-BBB9836F494C}</ProjectGuid>
     <RootNamespace>Big Dipper</RootNamespace>
     <ProjectName>Big Dipper</ProjectName>
   </PropertyGroup>
@@ -64,9 +67,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="BigDipper.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
