@@ -4,8 +4,11 @@
 #include <GL/glu.h>
 #include <GL/glut.h>
 
-#define WIDTH 640
-#define HEIGHT 480
+#include <fstream>
+
+#define WIDTH 1280
+#define HEIGHT 720
+#define MOVEMENT 10
 
 typedef struct {
 	GLfloat x;
@@ -13,8 +16,76 @@ typedef struct {
 } Point;
 
 void display();
-void drawRandomHouse();
 void drawHouse(GLfloat width, GLfloat height, Point roof);
+
+int offsetX = 0;
+int offsetY = 0;
+
+int numberOfHouses;
+int randomX[12];
+int randomY[12];
+float randomColor[12][3];
+
+void drawPolyLineFile(const char * fileName) {
+
+	std::ifstream inStream;
+	inStream.open(fileName);	// open the file
+
+	if(inStream.fail()) return;
+
+	GLint numpolys, numLines;
+	GLfloat x, y;
+	inStream >> numpolys;		           // read the number of polylines
+
+	for(int iPoly = 0; iPoly < numpolys; iPoly++) { // read each polyline
+		inStream >> numLines;
+		glBegin(GL_LINE_STRIP);	     // draw the next polyline
+		for(int i = 0; i < numLines; i++) {
+			inStream >> x >> y;        // read the next x, y pair
+			glVertex2f(x + offsetX, y + offsetY);
+		}
+		glFlush();
+		glEnd();
+	}
+	glFlush();
+	inStream.close();
+}
+
+void keyboardListener(unsigned char key, int mouseX, int mouseY) {
+	switch(key) {
+		case 'u':
+		case 'U':
+			offsetY += MOVEMENT;
+			break;
+		case 'd':
+		case 'D':
+			offsetY -= MOVEMENT;
+			break;
+		case 'r':
+		case 'R':
+			offsetX += MOVEMENT;
+			break;
+		case 'l':
+		case 'L':
+			offsetX -= MOVEMENT;
+			break;
+		default:
+			break;
+	}
+	display();
+}
+
+void defineRandom() {
+	srand(time(NULL));
+	numberOfHouses = 3 + rand() % 12;
+	for(int i = 1; i <= numberOfHouses; i++) {
+		randomX[i] = rand() % 120;
+		randomY[i] = rand() % 80;
+		for(int color = 0; color < 3; color++) {
+			randomColor[i][color] = ((double)rand() / RAND_MAX);
+		}
+	}
+}
 
 int main(int argc, char** argv) {
 	glutInit(&argc, argv);
@@ -22,8 +93,10 @@ int main(int argc, char** argv) {
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
 	glutInitWindowSize(WIDTH, HEIGHT);
 	glutInitWindowPosition(0, 0);
-	glutCreateWindow("Random Village");
+	glutCreateWindow("Dino Village");
+	glutKeyboardFunc(keyboardListener);
 
+	defineRandom();
 	glutDisplayFunc(display);
 	glutMainLoop();
 
@@ -31,38 +104,43 @@ int main(int argc, char** argv) {
 
 }
 
+
 void setWindow(float left, float right, int bottom, int top) {
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	gluOrtho2D(left, right, bottom, top);
 }
 
-
-void display() {
-
-	glClear(GL_COLOR_BUFFER_BIT);
-
-	setWindow(0, WIDTH, 0, HEIGHT);
-	srand(time(NULL));
-	int numberOfHouses = 3 + rand() % 12;
-	for(int i = 1; i <= numberOfHouses; i++) {
-		int randomX = rand() % 120;
-		int randomY = rand() % 80;
-		glViewport(i * randomX, i * randomY, randomX * 3, randomY * 3);
-		drawRandomHouse();
-	}
-
-	glFlush();
-
+void drawDinosaur() {
+	glColor3f(1, 1, 1);
+	glViewport(0, 0, WIDTH, HEIGHT);
+	drawPolyLineFile("dino.dat");
 }
 
-void drawRandomHouse() {
+void drawRandomHouse(int houseNum) {
 	GLfloat houseWidth = WIDTH / 3;
 	GLfloat houseHeight = HEIGHT / 3;
 	Point roofPoint; roofPoint.x = houseWidth; roofPoint.y = (houseHeight + houseHeight);
-	glColor3f(((double)rand() / RAND_MAX), ((double)rand() / RAND_MAX), ((double)rand() / RAND_MAX));
+	glColor3f(randomColor[houseNum][0], randomColor[houseNum][1], randomColor[houseNum][2]);
 	drawHouse(houseWidth, houseHeight, roofPoint);
+	glFlush();
 }
+
+void drawHouses() {
+	for(int i = 1; i <= numberOfHouses; i++) {
+		glViewport(i * randomX[i], i * randomY[i], randomX[i] * 3, randomY[i] * 3);
+		drawRandomHouse(i);
+	}
+}
+
+void display() {
+	glClear(GL_COLOR_BUFFER_BIT);
+	setWindow(0, WIDTH, 0, HEIGHT);
+	drawHouses();
+	drawDinosaur();
+	glFlush();
+}
+
 
 void drawEdges(Point bottomLeft, Point topLeft, Point topRight, Point bottomRight) {
 	glBegin(GL_LINE_STRIP);
@@ -95,8 +173,8 @@ void drawDoor(Point bottomLeft, Point bottomRight, GLfloat height) {
 }
 
 void drawWindow(Point bottomLeft, Point topLeft, Point topRight, Point bottomRight) {
-	GLfloat tenOffset = ((bottomLeft.x + bottomRight.x) / 7); 
-	GLfloat thirtyOffset = ((bottomLeft.x + bottomRight.x) / 20); 
+	GLfloat tenOffset = ((bottomLeft.x + bottomRight.x) / 7);
+	GLfloat thirtyOffset = ((bottomLeft.x + bottomRight.x) / 20);
 	topLeft.x = topRight.x - thirtyOffset; topLeft.y = topRight.y - thirtyOffset;
 	bottomLeft.x = topRight.x - thirtyOffset; bottomLeft.y = topRight.y - tenOffset;
 	bottomRight.x = topRight.x - tenOffset; bottomRight.y = topRight.y - tenOffset;
