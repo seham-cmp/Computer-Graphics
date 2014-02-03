@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Parameter House", "Paramete
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Village", "Village\Village.vcxproj", "{87CBBC0D-1859-43E1-9E6A-D77CF845A124}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Moving Dinosaur", "Moving Dinosaur\Moving Dinosaur.vcxproj", "{93DA4E68-6573-466C-A2FD-4989FAC2C3E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -21,6 +23,10 @@ Global
 		{87CBBC0D-1859-43E1-9E6A-D77CF845A124}.Debug|Win32.Build.0 = Debug|Win32
 		{87CBBC0D-1859-43E1-9E6A-D77CF845A124}.Release|Win32.ActiveCfg = Release|Win32
 		{87CBBC0D-1859-43E1-9E6A-D77CF845A124}.Release|Win32.Build.0 = Release|Win32
+		{93DA4E68-6573-466C-A2FD-4989FAC2C3E9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{93DA4E68-6573-466C-A2FD-4989FAC2C3E9}.Debug|Win32.Build.0 = Debug|Win32
+		{93DA4E68-6573-466C-A2FD-4989FAC2C3E9}.Release|Win32.ActiveCfg = Release|Win32
+		{93DA4E68-6573-466C-A2FD-4989FAC2C3E9}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -23,7 +23,7 @@ int main(int argc, char** argv) {
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
 	glutInitWindowSize(WIDTH, HEIGHT);
 	glutInitWindowPosition(0, 0);
-	glutCreateWindow("Parameterized House");
+	glutCreateWindow("Random Village");
 
 	glutDisplayFunc(display);
 	glutMainLoop();

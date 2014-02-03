@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{87CBBC0D-1859-43E1-9E6A-D77CF845A124}</ProjectGuid>
+    <ProjectGuid>{93DA4E68-6573-466C-A2FD-4989FAC2C3E9}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Village</RootNamespace>
+    <RootNamespace>MovingDinosaur</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -76,7 +76,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Village.cpp" />
+    <ClCompile Include="Dinosaur.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
