@@ -5,7 +5,8 @@
 
 #define WIDTH 640
 #define HEIGHT 480
-#define SIZE_MODIFIER 1 //modify to change global scale
+#define WIDTH_MODIFIER 1 //modify to change global scale
+#define HEIGHT_MODIFIER 1 //modify to change global scale
 
 typedef struct {
 	GLfloat x;
@@ -44,9 +45,9 @@ void display() {
 	setWindow(0, WIDTH, 0, HEIGHT);
 	GLfloat houseWidth = WIDTH / 3;
 	GLfloat houseHeight = HEIGHT / 3;
-	Point roofPoint; roofPoint.x = houseWidth * SIZE_MODIFIER; roofPoint.y = (houseHeight + houseHeight) * SIZE_MODIFIER;
+	Point roofPoint; roofPoint.x = houseWidth * WIDTH_MODIFIER; roofPoint.y = (houseHeight + houseHeight) * HEIGHT_MODIFIER;
 
-	drawHouse(houseWidth * SIZE_MODIFIER, houseHeight * SIZE_MODIFIER, roofPoint);
+	drawHouse(houseWidth * WIDTH_MODIFIER, houseHeight * HEIGHT_MODIFIER, roofPoint);
 
 	glFlush();
 
