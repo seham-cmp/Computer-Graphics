@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{8E8156CC-3401-4B22-AC69-E5CCA8CB3382}</ProjectGuid>
+    <ProjectGuid>{87CBBC0D-1859-43E1-9E6A-D77CF845A124}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>REMOVE</RootNamespace>
+    <RootNamespace>Village</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -76,6 +76,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Parameter House\Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
