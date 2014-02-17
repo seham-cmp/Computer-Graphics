@@ -55,16 +55,14 @@ void keyboardListener(unsigned char key, int mouseX, int mouseY) {
 }
 
 void drawTween(Point start[], Point end[], int indices, float t) {
-	//rainbow colors
 	GLfloat tweenShape[12][2];
 
 	for(int pt = 0; pt < indices; pt++) {
 		tweenShape[pt][0] = (1.0 - t) * start[pt].x + t * end[pt].x;
 		tweenShape[pt][1] = 480 - ((1.0 - t) * start[pt].y + t * end[pt].y);
 	}
-	glColor3f(0, 0, 1.0);
+	glColor3f(t, t, 1.0 - t);
 	glVertexPointer(2, GL_FLOAT, 0, tweenShape);
-	//glColorPointer(3, GL_FLOAT, 0, VertexColors);
 
 	glClear(GL_COLOR_BUFFER_BIT);
 	glDrawArrays(GL_LINE_LOOP, 0, 12);
@@ -105,7 +103,6 @@ void initGl() {
 	glMatrixMode(GL_MODELVIEW);
 
 	glEnableClientState(GL_VERTEX_ARRAY);  //enable a vertex array
-	//glEnableClientState(GL_COLOR_ARRAY);  //enable color array
 	glShadeModel(GL_SMOOTH);
 	glViewport(0, 0, windowWidth, windowHeight);
 }
