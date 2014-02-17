@@ -10,7 +10,8 @@
 #define WH    (WW/RATIO)     //Height of viewport
 #define HALFX ((int)(WW/2))  //X coordinate  min/max
 #define HALFY ((int)(WH/2))  //Y coordinate  min/max
-#define deltat .001	         //increment of t
+#define deltat .1	         //increment of t
+
 //Globals
 int windowWidth;             //Window width in pixels
 int windowHeight;            //Window height in pixels 
@@ -42,13 +43,25 @@ Point* loadPolyLineFile(const char * fileName) {
 	return polyLine;
 }
 
+static float tween = 0;
+
 void keyboardListener(unsigned char key, int mouseX, int mouseY) {
-	
-	//drawPolyLineFile("mu.dat");
+	switch(key) {
+		case 'm':
+		case 'M':
+			if(tween > 0) tween -= deltat;
+			break;
+		case 'u':
+		case 'U':
+			if(tween < 1) tween += deltat;
+			break;
+		default:
+			break;
+	}
 }
 
+
 void display() {
-	float delta = .01;
 	Point* shape = loadPolyLineFile("m.dat");
 	Point mShape[12];
 	for(int i = 0; i < 12; i++) {
@@ -59,8 +72,6 @@ void display() {
 	float VertexColors[12][3] = { { 1, 0, 0 }, { 1, 0, 0 }, { 1, 0, 0 }, { 1, 0, 0 }, { 0, 1, 0 }, { 0, 1, 0 }, { 0, 1, 0 }, { 0, 1, 0 }, { 0, 0, 1 }, { 0, 0, 1 }, { 0, 0, 1 }, { 0, 0, 1 } };
 	GLfloat tweenShape[12][2];
 
-	static float tween = 0 - delta;
-	if(tween < 1) tween += delta; //increment the tween
 
 	for(int pt = 0; pt < 12; pt++) {
 		tweenShape[pt][0] = (1.0 - tween) * mShape[pt].x + tween * uShape[pt].x;
@@ -69,8 +80,6 @@ void display() {
 
 	glVertexPointer(2, GL_FLOAT, 0, tweenShape);
 	glColorPointer(3, GL_FLOAT, 0, VertexColors);
-
-	for(int i = 0; i < 1000000; i++);  //lazy man's loop
 
 	glClear(GL_COLOR_BUFFER_BIT);
 	glDrawArrays(GL_LINE_LOOP, 0, 12);
@@ -91,6 +100,7 @@ int main(int argc, char** argv) {
 	glutCreateWindow("MU Tween");
 
 	glutDisplayFunc(display);
+	glutKeyboardFunc(keyboardListener);
 
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
