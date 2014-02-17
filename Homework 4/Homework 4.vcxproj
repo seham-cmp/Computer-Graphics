@@ -11,10 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{FE153BCD-8BD8-4210-B5D8-1DE0A4150146}</ProjectGuid>
+    <ProjectGuid>{E2C04616-6A28-45EE-A24C-4628D3D918E9}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Homework3</RootNamespace>
-    <ProjectName>RENAME</ProjectName>
+    <RootNamespace>Homework4</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -77,6 +76,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Tween.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="m.dat" />
+    <None Include="u.dat" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
