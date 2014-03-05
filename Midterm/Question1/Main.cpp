@@ -9,6 +9,7 @@ typedef struct {
 
 int length = 0; //total number of points
 
+/* reads an input file consisting of 3d vertices */
 Point* readInput() {
 
 	std::ifstream inStream;

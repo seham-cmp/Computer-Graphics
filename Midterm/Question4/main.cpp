@@ -8,6 +8,7 @@
 GLfloat x1, x2, y1, y2;
 bool rotate = false;
 
+//draws a rectangle using the global coordinates
 void drawRectangle() {
 	glBegin(GL_LINE_LOOP);
 		glVertex2f(x1, y2);
@@ -17,6 +18,7 @@ void drawRectangle() {
 	glEnd();
 }
 
+//finds the largest starting rectangle using the window width/height
 void findFirstRectangle() {
 	x1 = 0; y1 = 0;
 	x2 = glutGet(GLUT_WINDOW_WIDTH);
@@ -26,6 +28,7 @@ void findFirstRectangle() {
 	drawRectangle();
 }
 
+//calculates the next rectangle switching between horizontal and vertical boxes
 void drawRectangles() {
 	if(rotate) x2 = y2 / RATIO;
 	else y2 = x2 / RATIO;
@@ -44,7 +47,7 @@ void display() {
 	setWindow(0, 600, 0, 400);
 
 	findFirstRectangle();
-	while(abs((long)x1 - (long)x2) > 1 && abs((long)y1 - (long)y2) > 1) {
+	while(abs((long)x1 - (long)x2) > 1 && abs((long)y1 - (long)y2) > 1) { //keep going until the boxes are less than 1 pixel differences
 		drawRectangles();
 	}
 	glFlush();

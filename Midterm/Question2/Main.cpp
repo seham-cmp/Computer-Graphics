@@ -1,5 +1,6 @@
 #include <math.h>
 
+//Calculates the entire model matrix given a roll, pitch, and yaw angle
 float* calcModelMatrix(float x, float y, float z) {
 	float modelMatrix[16];
 	float a = cos(x);
@@ -32,6 +33,7 @@ float* calcModelMatrix(float x, float y, float z) {
 	return modelMatrix;
 }
 
+//calculate the roll matrix given a roll angle
 float* roll(float x) {
 	float rollMatrix[9];
 	float a = cos(x);
@@ -52,6 +54,7 @@ float* roll(float x) {
 	return rollMatrix;
 }
 
+//calculate the pitch matrix given a pitch angle
 float* pitch(float y) {
 	float pitchMatrix[9];
 	float a = cos(y);
@@ -72,6 +75,7 @@ float* pitch(float y) {
 	return pitchMatrix;
 }
 
+//calculate the yaw matrix given a yaw angle
 float* yaw(float z) {
 	float yawMatrix[9];
 	float a = cos(z);
