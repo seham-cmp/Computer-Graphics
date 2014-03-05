@@ -11,7 +11,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Question3", "Question3\Ques
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Question4", "Question4\Question4.vcxproj", "{48B4C963-D28E-40E5-AF92-22DC5476066B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "chair_SDL", "Question5\chair_SDL\chair_SDL.vcxproj", "{F7516A8D-4687-48F2-87E4-160E968AC36F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Question5", "Question 5\chair_SDL.vcxproj", "{F7516A8D-4687-48F2-87E4-160E968AC36F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -82,13 +82,13 @@
     <ClInclude Include="..\SDL_arch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\camera.cpp" />
-    <ClCompile Include="..\main_SDL_Chair.cpp" />
-    <ClCompile Include="..\RGBpixmap.cpp" />
-    <ClCompile Include="..\SDL_arch.cpp" />
+    <None Include="bench.dat" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="CHAIR.DAT" />
+    <ClCompile Include="camera.cpp" />
+    <ClCompile Include="main_SDL_Chair.cpp" />
+    <ClCompile Include="RGBpixmap.cpp" />
+    <ClCompile Include="SDL_arch.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

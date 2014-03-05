@@ -26,21 +26,21 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\camera.cpp">
+    <ClCompile Include="camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\main_SDL_Chair.cpp">
+    <ClCompile Include="main_SDL_Chair.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\RGBpixmap.cpp">
+    <ClCompile Include="RGBpixmap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\SDL_arch.cpp">
+    <ClCompile Include="SDL_arch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="CHAIR.DAT">
+    <None Include="bench.dat">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

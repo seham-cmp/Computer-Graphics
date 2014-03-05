@@ -1,0 +1,43 @@
+!chair.dat
+light 20 60 30 .7 .7 .7
+background 1 1 1 
+!exponent 50
+
+def handle {
+diffuse .7 .7 .7
+push translate -.04 0 0 scale .01 .1 .01 cube pop !left
+push translate .24 0 0 scale .01 .1 .01 cube pop !right
+push translate .1 .1 0 scale .15 .01 .01 cube pop !top
+push translate .1 -.1 0 scale .15 .01 .01 cube pop !bottom
+}
+
+def seat {
+diffuse .6 .4 .2
+push translate .1 0 0 scale .13 .01 .5 cube pop
+}
+
+def bench {
+push translate 0 0 .4 use seat pop
+push translate 0 0 0 use handle pop
+push translate 0 0 0.8 use handle pop
+}
+
+def box {
+diffuse 1 0 0 
+push translate .1 .2 .15 rotate 60 1 1 1 scale .1 .1 .1 cube pop
+}
+
+def s {
+diffuse 0 0 1
+push translate .1 .1 .4 scale .05 .05 .05 sphere pop
+}
+
+def t {
+diffuse 0 1 0
+push translate .1 .1 .6 scale .1 .1 .1 tetrahedron pop
+}
+
+use bench 
+use s
+use t
+use box pop

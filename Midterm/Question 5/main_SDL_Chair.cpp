@@ -63,7 +63,7 @@ void main( int argc, char** argv )
 	camera.set( 1.5, 1.5, 1.5, 0, -0.25, 0, 0, 1, 0 );
 	camera.setShape( 30.0f, 64.0f/48.0f, 0.5f, 110.0f );		// added for camera use
 	//Using SDL to create object
-	scn.read( "CHAIR.DAT" );
+	scn.read( "bench.dat" );
 	glEnable( GL_LIGHTING );
 	scn.makeLightsOpenGL();
 
