@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "chair_SDL", "chair_SDL\chair_SDL.vcxproj", "{F7516A8D-4687-48F2-87E4-160E968AC36F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7516A8D-4687-48F2-87E4-160E968AC36F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F7516A8D-4687-48F2-87E4-160E968AC36F}.Debug|Win32.Build.0 = Debug|Win32
+		{F7516A8D-4687-48F2-87E4-160E968AC36F}.Release|Win32.ActiveCfg = Release|Win32
+		{F7516A8D-4687-48F2-87E4-160E968AC36F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
