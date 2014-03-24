@@ -1,0 +1,14 @@
+!chair.dat
+light 20 60 30 .7 .7 .7
+background 1 1 1 
+!exponent 50
+
+def handle {
+diffuse .7 .7 .7 !grey color
+push translate -.04 0 0 scale .01 .1 .01 cube pop !left
+push translate .24 0 0 scale .01 .1 .01 cube pop !right
+push translate .1 .1 0 scale .15 .01 .01 cube pop !top
+push translate .1 -.1 0 scale .15 .01 .01 cube pop !bottom
+}
+
+use handle pop
