@@ -21,14 +21,14 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SDL\camera.cpp">
-      <Filter>Source Files\SDL</Filter>
-    </ClCompile>
     <ClCompile Include="SDL\RGBpixmap.cpp">
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
     <ClCompile Include="SDL\SDL_arch.cpp">
       <Filter>Source Files\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL\camera.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

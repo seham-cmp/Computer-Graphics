@@ -1,3 +1,4 @@
+// Camera.h for my Camera class, Nov. 19,1999, for ECE660 
 
 #ifndef _HlCamera 
 #define _HlCamera 
@@ -12,10 +13,10 @@ class Camera{
     void setModelViewMatrix(); 
     public: 
     Camera(void); 
-   // void roll(float angle); 
-    //void pitch(float angle); 
-    //void yaw(float angle); 
-    //void slide(double du, double dv, double dn); 
+    void roll(float angle); 
+    void pitch(float angle); 
+    void yaw(float angle); 
+    void slide(double du, double dv, double dn); 
     void set(Point3 Eye, Point3 look, Vector3 up);
 	
 	void set( float eyeX, float eyeY, float eyeZ, float lookX, float lookY, float lookZ, float upX, float upY, float upZ );
