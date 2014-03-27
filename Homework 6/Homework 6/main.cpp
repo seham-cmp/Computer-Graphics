@@ -5,12 +5,7 @@
 #include "SDL\SDL_arch.h"
 #include "SDL\camera.h"
 
-double eyeX = 2.3;
-double eyeY = 1.3;
-double eyeZ = 2.0;
-double x = 20;
-
-Camera cam; // make a global camera object
+Camera cam; 
 
 void keyboardListener(unsigned char key, int mouseX, int mouseY) {
 	switch(key) {

@@ -6,7 +6,7 @@
 
 Scene scn;		// the scene object
 Camera camera;	// the camera object
-
+int x;
 float screenWidth = 640, screenHeight = 480;
 
 float R = screenWidth / screenHeight;  // Global Aspect Ratio
