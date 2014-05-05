@@ -1,0 +1,21 @@
+light 20 60 30 .7 .7 .7
+background 1 1 1 
+
+def letterM {
+	diffuse 0 0 1
+	push mesh leg.3vn pop
+	push translate 5 0 0 mesh leg.3vn pop
+	push translate 2.5 0 0 scale 1 1 .5 mesh leg.3vn pop
+	push scale 1.2 1 1 rotate 90 0 1 0 mesh leg.3vn pop
+}
+
+def letterU {
+	diffuse 1 1 0
+	translate 5 0 5
+	push mesh leg.3vn pop
+	push translate 3 0 0 mesh leg.3vn pop
+	push translate 0 0 5 rotate 90 0 1 0 scale 1 1 .7 mesh leg.3vn pop
+}
+
+push scale .1 .1 .1 rotate 90 1 0 0 use letterM pop
+scale .1 .1 .1 rotate 90 1 0 0 use letterU pop

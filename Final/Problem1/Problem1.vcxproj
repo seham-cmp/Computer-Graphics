@@ -11,10 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{A7467169-22A3-4F3A-87FB-F2D2A78B0ED0}</ProjectGuid>
+    <ProjectGuid>{42F197B8-BF3D-451B-ABB3-69D37DE11E3E}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Final</RootNamespace>
-    <ProjectName>Problem 2</ProjectName>
+    <RootNamespace>Problem1</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -53,12 +52,10 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -79,11 +76,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="RGBpixmap.cpp" />
+    <ClInclude Include="SDL\camera.h" />
+    <ClInclude Include="SDL\RGBpixmap.h" />
+    <ClInclude Include="SDL\SDL_arch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="RGBPixmap.h" />
+    <None Include="sdl.dat" />
+    <None Include="Leg.3vn" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="SDL\camera.cpp" />
+    <ClCompile Include="SDL\RGBpixmap.cpp" />
+    <ClCompile Include="SDL\SDL_arch.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
